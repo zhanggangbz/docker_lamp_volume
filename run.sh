@@ -35,8 +35,8 @@ if [[ ! -d $VOLUME_HOME/mysql ]]; then
 else
     echo "=> Using an existing volume of MySQL"
 fi
-mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
-chmod -R 777 /app
+mkdir -p /app/www && rm -fr /var/www/html && ln -s /app /var/www/html
+chmod -R 777 /app/www
 chmod -R 777 /var/www/html
-chown -R www-data:www-data /app /var/www/html
+chown -R www-data:www-data /app/www /var/www/html
 exec supervisord -n
