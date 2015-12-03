@@ -20,6 +20,7 @@ ADD my.cnf /etc/mysql/conf.d/my.cnf
 ADD supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 ADD supervisord-mysqld.conf /etc/supervisor/conf.d/supervisord-mysqld.conf
 ADD supervisord-openssh.conf /etc/supervisor/conf.d/supervisord-openssh.conf
+ADD sources.list /etc/apt/sources.list
 
 # Remove pre-installed database
 RUN rm -rf /var/lib/mysql/*
